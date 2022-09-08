@@ -4,7 +4,7 @@
 #
 Name     : qtserialbus
 Version  : 5.15.2
-Release  : 29
+Release  : 30
 URL      : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtserialbus-everywhere-src-5.15.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtserialbus-everywhere-src-5.15.2.tar.xz
 Summary  : No detailed summary available
@@ -88,13 +88,13 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1655665229
+export SOURCE_DATE_EPOCH=1662657428
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qtserialbus
-cp %{_builddir}/qtserialbus-everywhere-src-5.15.2/LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtserialbus/61907422fefcd2313a9b570c31d203a6dbebd333
-cp %{_builddir}/qtserialbus-everywhere-src-5.15.2/LICENSE.GPLv2 %{buildroot}/usr/share/package-licenses/qtserialbus/87d17bf05b5aba91a2091b17a89336fb6a8954e2
-cp %{_builddir}/qtserialbus-everywhere-src-5.15.2/LICENSE.GPLv3 %{buildroot}/usr/share/package-licenses/qtserialbus/7d974f34cf5fd474f0fdf6ebc8d410ea5c8b72de
-cp %{_builddir}/qtserialbus-everywhere-src-5.15.2/LICENSE.LGPLv3 %{buildroot}/usr/share/package-licenses/qtserialbus/d8b489a3c3d500a6601181e3db39bec6124b86fc
+cp %{_builddir}/qtserialbus-everywhere-src-%{version}/LICENSE.FDL %{buildroot}/usr/share/package-licenses/qtserialbus/61907422fefcd2313a9b570c31d203a6dbebd333 || :
+cp %{_builddir}/qtserialbus-everywhere-src-%{version}/LICENSE.GPLv2 %{buildroot}/usr/share/package-licenses/qtserialbus/87d17bf05b5aba91a2091b17a89336fb6a8954e2 || :
+cp %{_builddir}/qtserialbus-everywhere-src-%{version}/LICENSE.GPLv3 %{buildroot}/usr/share/package-licenses/qtserialbus/7d974f34cf5fd474f0fdf6ebc8d410ea5c8b72de || :
+cp %{_builddir}/qtserialbus-everywhere-src-%{version}/LICENSE.LGPLv3 %{buildroot}/usr/share/package-licenses/qtserialbus/d8b489a3c3d500a6601181e3db39bec6124b86fc || :
 %make_install
 
 %files
