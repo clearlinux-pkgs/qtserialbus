@@ -1,3 +1,9 @@
 # This file contains pkgconfig build requirements that get picked up
 # but are undesirable. One entry per line, no whitespace.
 Qt5SerialBus
+Qt6SerialBus
+Qt6Core
+Qt6Network
+Qt6SerialPort
+Qt6Test
+Qt6Widgets
